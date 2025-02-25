@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
                     )}
                 </div>
             </div> */}
-      <div className="mt-8 md:text-center text-foreground-accent px-6">
+      <div className="mt-8 md:text-center flex flex-col items-center justify-center text-foreground-accent px-6">
         <p>
           Copyright &copy; {new Date().getFullYear()} {siteDetails.siteName}. כל
           הזכויות שמורות.
@@ -69,20 +69,6 @@ const Footer: React.FC = () => {
           width={500}
           height={500}
         />
-        <p className="text-sm mt-2 text-gray-500">
-          Made with &hearts; by{" "}
-          <a href="https://nexilaunch.com" target="_blank">
-            Nexi Launch
-          </a>
-        </p>
-        <p className="text-sm mt-2 text-gray-500">
-          UI kit by{" "}
-          <a
-            href="https://ui8.net/youthmind/products/fintech-finance-mobile-app-ui-kit"
-            target="_blank">
-            Youthmind
-          </a>
-        </p>
       </div>
     </footer>
   );
