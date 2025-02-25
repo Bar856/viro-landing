@@ -22,7 +22,7 @@ const CTA: React.FC = () => {
                 href="https://ashdod.smarticket.co.il/הכנס___מחוב_לחופש_?"
                 target="_blank">
                 <button
-                  className="mt-6 px-8 py-3 bg-green-600 text-white font-bold rounded hover:bg-blue-700 transition"
+                  className="shadow-lg mt-6 px-8 py-3 bg-green-600 text-white font-bold rounded hover:bg-green-700 transition"
                   type="button">
                   הירשמו עכשיו{" "}
                 </button>

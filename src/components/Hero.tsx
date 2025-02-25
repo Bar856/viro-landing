@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
         <h1 className="text-4xl md:text-6xl md:leading-tight font-bold text-foreground max-w-lg md:max-w-2xl mx-auto">
           {heroDetails.heading}
         </h1>
-        <p className="mt-4 text-foreground max-w-lg mx-auto">
+        <p className="mt-4 text-foreground text-2xl md:text-4xl max-w-lg mx-auto">
           {heroDetails.subheading}
         </p>
 
@@ -75,7 +75,7 @@ const Hero: React.FC = () => {
             href="https://ashdod.smarticket.co.il/הכנס___מחוב_לחופש_?"
             target="_blank">
             <button
-              className="mt-6 px-8 py-3 bg-green-600 text-white font-bold rounded hover:bg-blue-700 transition"
+              className="mt-6 px-8 py-3 bg-green-600 text-white font-bold rounded hover:bg-green-700 transition shadow-lg"
               type="button">
               {heroDetails.cta1}
             </button>

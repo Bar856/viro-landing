@@ -1,5 +1,5 @@
 "use client";
-// import Image from "next/image";
+import Image from "next/image";
 import clsx from "clsx";
 import { motion, Variants } from "framer-motion";
 
@@ -62,14 +62,14 @@ const BenefitSection: React.FC<Props> = ({ benefit, imageAtRight }: Props) => {
             "lg:order-2": imageAtRight,
           })}>
           <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-gray-300 shadow-lg">
-            {/* <Image
+            <Image
               src={imageSrc}
               alt={title}
               width={160}
               height={160}
               quality={100}
               className="object-cover w-full h-full"
-            /> */}
+            />
           </div>
         </div>
         <div

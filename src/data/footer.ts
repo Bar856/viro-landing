@@ -7,7 +7,7 @@ export const footerDetails: {
     telephone: string;
     socials: ISocials;
 } = {
-    subheading: "SMARTFLOW",
+    subheading: "עוזרים לכם לצאת מחוב לחופש",
     quickLinks: [
         {
             text: "Features",
@@ -22,16 +22,16 @@ export const footerDetails: {
             url: "#testimonials"
         }
     ],
-    email: 'address@yoursite.com',
-    telephone: '+1 (123) 456-7890',
+    email: 'orianmi189@gmail.com',
+    telephone: '+972 54-991-5454',
     socials: {
         // github: 'https://github.com',
         // x: 'https://twitter.com/x',
-        twitter: 'https://twitter.com/Twitter',
-        facebook: 'https://facebook.com',
+        // twitter: 'https://twitter.com/Twitter',
+        facebook: 'https://www.facebook.com/profile.php?id=100092499513720',
         // youtube: 'https://youtube.com',
-        linkedin: 'https://www.linkedin.com',
+        // linkedin: 'https://www.linkedin.com',
         // threads: 'https://www.threads.net',
-        instagram: 'https://www.instagram.com',
+        instagram: 'https://www.instagram.com/orian.abramov/',
     }
 }
