@@ -59,7 +59,7 @@ export const benefits: IBenefit[] = [
         icon: <FiTrendingUp size={26} />,
       },
     ],
-    imageSrc: "/images/osher.jpeg",
+    imageSrc: "/images/shiran.png",
   },
   {
     title: "חיים מ(ע)ושרים",
@@ -108,6 +108,6 @@ export const benefits: IBenefit[] = [
         icon: <FiBarChart2 size={26} />,
       },
     ],
-    imageSrc: "/images/osher.jpeg",
+    imageSrc: "/images/marina.png",
   },
 ];
