@@ -55,33 +55,37 @@ const PersonIntro = () => {
           className="object-cover w-full h-full"
         />
       </motion.div>
-
       {/* Text Content */}
       <motion.div
         className="max-w-lg text-center md:text-right"
         variants={containerVariants}>
+        <motion.h1
+          className="text-5xl md:text-3xl font-bold text-primary md:col-start-2 md:col-end-3"
+          variants={containerVariants}>
+          מנחת הכנס
+        </motion.h1>
         <h2 className="text-2xl md:text-3xl font-bold text-primary">
           אוריאן אברמוב
         </h2>
-        <p className="text-lg font-semibold text-gray-700 mt-1">
+        <p className="text-lg font-semibold text-secondary mt-1">
           יועצת משכנתאות ופיננסים | מומחית לתיקים מורכבים, מסורבים ואיחוד
           הלוואות
         </p>
-        <p className="mt-4 text-gray-800 leading-relaxed">
-          אני יועצת משכנתאות ופיננסים עם ניסיון של 5 שנים טיפלתי במאות משפחות
+        <p className="mt-4 text-foreground leading-relaxed">
+          אני יועצת משכנתאות ופיננסים עם ניסיון של 5 שנים טיפלתי באלפי משפחות
           שנתקלו בקשיים כלכליים קשים. במהלך השנים עמדתי לצד משפחות שנדחו שוב
           ושוב על ידי הבנקים, ששאפו למצוא פתרון לבעיות החובות ולחזור למסלול של
           יציבות כלכלית. אני מאמינה שאין בעיה פיננסית שאין לה פתרון – רק צריך את
           הכלים והליווי הנכון.
         </p>
-        <p className="mt-4 text-gray-800 leading-relaxed">
+        <p className="mt-4 text-foreground leading-relaxed">
           אני נשואה לאלי ואמא לשני ילדים מקסימים, ובמקביל לחיי המשפחה, אני אוהבת
           את העבודה שלי ונושאת את השליחות לעזור לאחרים לשנות את חייהם. הקמתי את
           חברת <span className="font-bold">VIRO</span> בעשר אצבעות מתוך תשוקה
           אמיתית להוביל אנשים לחופש כלכלי ולהעניק להם את הידע הנדרש להתמודדות עם
           אתגרים פיננסיים.
         </p>
-        <p className="mt-4 text-gray-800 leading-relaxed">
+        <p className="mt-4 text-foreground leading-relaxed">
           בנוסף, אני מנחה <span className="font-bold">תוכנית רדיו פיננסית</span>{" "}
           בכל יום שלישי בין השעות 11:00-12:00, בה אני חולקת מידע עדכני, טיפים
           וכלים פרקטיים לניהול כלכלי נכון.

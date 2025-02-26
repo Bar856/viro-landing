@@ -3,20 +3,22 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --primary: #FED835;
-  --secondary: #304fff;
+  --background: #1e2a42;
+  --foreground: #F8FAFC;
+  --primary: #3B82F6;
+  --secondary: #60A5FA;
 
   --primary-accent: #e5c230;
-  --foreground-accent: #454545;
+  --foreground-accent: #F8FAFC;
   --hero-background: #F3F3F5;
 }
 
 html {
   @apply scroll-smooth;
 }
-
+.bg-primary {
+  background-color: var(--background);
+}
 body {
   @apply text-lg;
   

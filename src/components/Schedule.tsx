@@ -42,7 +42,7 @@ const Schedule: React.FC = () => {
   return (
     <section id="schedule" className="my-12 px-5">
       <motion.h2
-        className="text-5xl font-bold mb-10 text-center"
+        className="text-5xl text-primary font-bold mb-10 text-center"
         variants={childVariants}
         initial="offscreen"
         whileInView="onscreen"
@@ -59,9 +59,9 @@ const Schedule: React.FC = () => {
         {scheduleItems.map((item, index) => (
           <motion.div
             key={index}
-            className="bg-green-200 shadow-xl rounded-md gap-2 flex flex-col md:flex-row md:items-center text-black border-2 border-black mb-4"
+            className="bg-[#E5E7EB] text-black shadow-xl rounded-md gap-2 flex flex-col md:flex-row md:items-center border-2 border-white mb-4"
             variants={childVariants}>
-            <div className="bg-gray-500 text-white m-0 md:m-2 py-2 px-4 rounded-md text-center font-bold">
+            <div className="bg-[#1e2a42] text-foreground m-0 md:m-2 py-2 px-4 rounded-md text-center font-bold">
               {item.time}
             </div>
             <div className="p-4">

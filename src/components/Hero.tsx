@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import { heroDetails } from "@/data/hero";
 import Link from "next/link";
+import ButtonCta from "./ButtonCta";
 
 const Hero: React.FC = () => {
   return (
@@ -36,9 +37,12 @@ const Hero: React.FC = () => {
           height={500}
         />
         {/* כותרת ראשית ותת-כותרת */}
-        <h1 className="text-4xl md:text-6xl md:leading-tight font-bold text-foreground max-w-lg md:max-w-2xl mx-auto">
+        <h1 className="text-5xl md:text-6xl md:leading-tight font-bold text-foreground max-w-lg md:max-w-2xl mx-auto">
           {heroDetails.heading}
         </h1>
+        <h2 className="text-4xl md:text-5xl md:leading-tight font-bold text-foreground max-w-lg md:max-w-2xl mx-auto">
+          {heroDetails.secondHeading}
+        </h2>
         <p className="mt-4 text-foreground text-2xl md:text-4xl max-w-lg mx-auto">
           {heroDetails.subheading}
         </p>
@@ -46,40 +50,35 @@ const Hero: React.FC = () => {
         {/* פרטי האירוע וכפתור ההרשמה */}
         <div className="mt-8 flex flex-col items-center">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl">
-            <div className="bg-white/80 rounded-lg p-4 shadow-md">
-              <p className="text-xs uppercase tracking-wide text-foreground">
+            <div className="bg-primary bg-opacity-60 rounded-lg p-4 shadow-md">
+              <p className="text-md uppercase tracking-wide text-foreground">
                 תאריך
               </p>
               <p className="font-bold text-lg text-foreground">
                 {heroDetails.eventDate}
               </p>
             </div>
-            <div className="bg-white/80 rounded-lg p-4 shadow-md">
-              <p className="text-xs uppercase tracking-wide text-foreground">
+            <div className="bg-primary bg-opacity-60 rounded-lg p-4 shadow-md">
+              <p className="text-md uppercase tracking-wide text-foreground">
                 שעות
               </p>
               <p className="font-bold text-lg text-foreground">
                 {heroDetails.eventTime}
               </p>
             </div>
-            <div className="bg-white/80 rounded-lg p-4 shadow-md">
-              <p className="text-xs uppercase tracking-wide text-foreground">
+            <div className="bg-primary bg-opacity-60 rounded-lg p-4 shadow-md">
+              <p className="text-md uppercase tracking-wide text-foreground">
                 מיקום
               </p>
               <p className="font-bold text-lg text-foreground">
                 {heroDetails.location}
               </p>
+              <p className="font-bold text-md text-foreground">
+                {heroDetails.location2}
+              </p>
             </div>
+            <ButtonCta />
           </div>
-          <Link
-            href="https://ashdod.smarticket.co.il/הכנס___מחוב_לחופש_?"
-            target="_blank">
-            <button
-              className="mt-6 px-8 py-3 bg-green-600 text-white font-bold rounded hover:bg-green-700 transition shadow-lg"
-              type="button">
-              {heroDetails.cta1}
-            </button>
-          </Link>
         </div>
       </div>
     </section>
