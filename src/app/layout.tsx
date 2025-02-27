@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/images/orian-2.png",
         width: 1200,
         height: 675,
         alt: siteDetails.siteName,
