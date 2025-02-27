@@ -10,6 +10,7 @@ import { IBenefit } from "@/types";
 interface Props {
   benefit: IBenefit;
   imageAtRight?: boolean;
+  index: number;
 }
 
 const containerVariants: Variants = {
@@ -46,59 +47,73 @@ export const childVariants = {
   },
 };
 
-const BenefitSection: React.FC<Props> = ({ benefit, imageAtRight }: Props) => {
+const BenefitSection: React.FC<Props> = ({
+  benefit,
+  imageAtRight,
+  index,
+}: Props) => {
   const { title, description, imageSrc, bullets, author } = benefit;
 
+  // צבעי הרקע משתנים לפי מספר התחנה
+  const colors = ["bg-blue-900", "bg-blue-800", "bg-blue-700", "bg-blue-600"];
+  const textColors = [
+    "text-blue-200",
+    "text-blue-200",
+    "text-blue-200",
+    "text-blue-200",
+  ];
+
   return (
-    <section className="benefit-section">
+    <section
+      className={`benefit-section m-6 p-8 rounded-lg text-white shadow-lg ${
+        colors[index % colors.length]
+      }`}>
       <motion.div
-        className="flex flex-wrap flex-col items-center justify-center gap-2 lg:flex-row lg:gap-20 lg:flex-nowrap mb-24"
+        className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 justify-between"
         variants={containerVariants}
-        initial={{ opacity: 0, y: 100 }}
+        initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true }}>
         <div
-          className={clsx("mt-5 lg:mt-0 flex justify-center", {
-            "lg:order-2": imageAtRight,
-          })}>
-          <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-gray-300 shadow-lg">
-            <Image
-              src={imageSrc}
-              alt={title}
-              width={160}
-              height={160}
-              quality={100}
-              className="object-cover w-full h-full"
-            />
-          </div>
+          className={`w-14 h-14 flex items-center justify-center rounded-full text-xl font-bold border border-white shadow-md ${
+            textColors[index % textColors.length]
+          }`}>
+          {index + 1}
         </div>
+        {/* ✅ תמונת המרצה - מתחלפת צדדים לפי `imageAtRight` */}
         <div
-          className={clsx("flex flex-wrap items-center w-full max-w-lg", {
-            "justify-start": imageAtRight,
-            "lg:order-1 justify-end": !imageAtRight,
-          })}>
-          <div className="w-full text-center lg:text-right">
-            <motion.div
-              className="flex flex-col w-full"
-              variants={childVariants}>
-              <SectionTitle>
-                <h3 className="lg:max-w-2xl">{title}</h3>
-              </SectionTitle>
-              <h3 className="lg:max-w-2xl text-sm">{author}</h3>
-              <p className="mt-1.5 mx-auto lg:ml-0 leading-normal text-md text-foreground-accent">
-                {description}
-              </p>
-            </motion.div>
-            <div className="mx-auto flex flex-row gap-4 lg:ml-0 w-full">
-              {bullets.map((item, index) => (
-                <BenefitBullet
-                  key={index}
-                  title={item.title}
-                  icon={item.icon}
-                  description={item.description}
-                />
-              ))}
-            </div>
+          className={clsx(
+            "w-48 h-48 rounded-full overflow-hidden border-4 border-gray-300 shadow-xl flex-shrink-0",
+            {
+              "lg:order-2": imageAtRight,
+              "lg:order-1": !imageAtRight,
+            }
+          )}>
+          <Image
+            src={imageSrc}
+            alt={title}
+            width={192}
+            height={192}
+            quality={100}
+            className="object-cover w-full h-full"
+          />
+        </div>
+        {/* ✅ מספר התחנה */}
+        <div className="flex flex-col items-center lg:items-start text-center lg:text-right w-full max-w-lg">
+          <h3 className="mt-4 text-3xl font-bold">{title}</h3>
+          <h4 className="text-lg text-gray-300 mt-1">{author}</h4>
+          <p className="mt-4 text-lg leading-relaxed">{description}</p>
+
+          {/* ✅ רשימת הבולטים */}
+          <div className="mt-6 w-full flex flex-col gap-3">
+            {bullets.map((item, idx) => (
+              <BenefitBullet
+                key={idx}
+                title={item.title}
+                icon={item.icon}
+                description={item.description}
+              />
+            ))}
           </div>
         </div>
       </motion.div>

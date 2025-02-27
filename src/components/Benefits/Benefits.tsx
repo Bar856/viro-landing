@@ -12,6 +12,7 @@ const Benefits: React.FC = () => {
         return (
           <BenefitSection
             key={index}
+            index={index}
             benefit={item}
             imageAtRight={index % 2 !== 0}
           />
