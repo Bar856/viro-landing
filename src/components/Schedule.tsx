@@ -25,7 +25,7 @@ const containerVariants: Variants = {
 export const childVariants = {
   offscreen: {
     opacity: 0,
-    x: -50,
+    x: -20,
   },
   onscreen: {
     opacity: 1,

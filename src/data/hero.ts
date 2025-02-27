@@ -8,5 +8,5 @@ export const heroDetails = {
     location2: 'אשדוד',
     cta1: 'להרשמה עכשיו',
     cta2: 'שריינו את מקומכם',
-    centerImageSrc: '/images/hero-mockup.webp',
+    centerImageSrc: '/images/hero-bg.webp',
 }

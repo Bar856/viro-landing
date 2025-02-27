@@ -27,6 +27,7 @@ export const footerDetails: {
     socials: {
         // github: 'https://github.com',
         // x: 'https://twitter.com/x',
+        whatsapp: 'https://wa.me/message/74ZRIEM2ZOACB1',
         // twitter: 'https://twitter.com/Twitter',
         facebook: 'https://www.facebook.com/profile.php?id=100092499513720',
         // youtube: 'https://youtube.com',

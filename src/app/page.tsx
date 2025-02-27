@@ -5,6 +5,7 @@ import Container from "@/components/Container";
 import Stats from "@/components/Stats";
 import CTA from "@/components/CTA";
 import Schedule from "@/components/Schedule";
+import Testimonials from "@/components/Testimonials";
 
 const HomePage: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const HomePage: React.FC = () => {
         <Stats />
         <Benefits />
         <Schedule />
+        <Testimonials />
         <CTA />
       </Container>
     </>

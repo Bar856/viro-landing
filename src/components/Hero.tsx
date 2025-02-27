@@ -4,6 +4,7 @@ import Image from "next/image";
 import { heroDetails } from "@/data/hero";
 import Link from "next/link";
 import ButtonCta from "./ButtonCta";
+import Countdown from "./Countdown";
 
 const Hero: React.FC = () => {
   return (
@@ -19,7 +20,7 @@ const Hero: React.FC = () => {
           quality={100}
           priority={true}
           alt="Background image"
-          className="opacity-60 blur-sm"
+          className="opacity-20 blur-sm"
         />
       </div>
 
@@ -29,21 +30,14 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="text-center flex flex-col justify-center items-center">
-        <Image
-          className="self-center w-[150px]"
-          src={"/VIRO.png"}
-          alt="logo"
-          width={500}
-          height={500}
-        />
         {/* כותרת ראשית ותת-כותרת */}
-        <h1 className="text-5xl md:text-6xl md:leading-tight font-bold text-foreground max-w-lg md:max-w-2xl mx-auto">
+        <h1 className="text-4xl md:text-6xl md:leading-tight font-bold text-foreground max-w-lg md:max-w-2xl mx-auto">
           {heroDetails.heading}
         </h1>
-        <h2 className="text-4xl md:text-5xl md:leading-tight font-bold text-foreground max-w-lg md:max-w-2xl mx-auto">
+        <h2 className="text-3xl md:text-5xl md:leading-tight font-bold text-foreground max-w-lg md:max-w-2xl mx-auto">
           {heroDetails.secondHeading}
         </h2>
-        <p className="mt-4 text-foreground text-2xl md:text-4xl max-w-lg mx-auto">
+        <p className="mt-4 text-foreground text-xl md:text-4xl max-w-lg mx-auto">
           {heroDetails.subheading}
         </p>
 
@@ -51,7 +45,7 @@ const Hero: React.FC = () => {
         <div className="mt-8 flex flex-col items-center">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl">
             <div className="bg-primary bg-opacity-60 rounded-lg p-4 shadow-md">
-              <p className="text-md uppercase tracking-wide text-foreground">
+              <p className="text-sm uppercase tracking-wide text-foreground">
                 תאריך
               </p>
               <p className="font-bold text-lg text-foreground">
@@ -59,7 +53,7 @@ const Hero: React.FC = () => {
               </p>
             </div>
             <div className="bg-primary bg-opacity-60 rounded-lg p-4 shadow-md">
-              <p className="text-md uppercase tracking-wide text-foreground">
+              <p className="text-sm uppercase tracking-wide text-foreground">
                 שעות
               </p>
               <p className="font-bold text-lg text-foreground">
@@ -67,18 +61,26 @@ const Hero: React.FC = () => {
               </p>
             </div>
             <div className="bg-primary bg-opacity-60 rounded-lg p-4 shadow-md">
-              <p className="text-md uppercase tracking-wide text-foreground">
+              <p className="text-sm uppercase tracking-wide text-foreground">
                 מיקום
               </p>
               <p className="font-bold text-lg text-foreground">
                 {heroDetails.location}
               </p>
-              <p className="font-bold text-md text-foreground">
+              <p className="font-bold text-sm text-foreground">
                 {heroDetails.location2}
               </p>
             </div>
+            <Countdown />
             <ButtonCta />
           </div>
+          <Image
+            className="self-center w-[150px]"
+            src={"/VIRO.png"}
+            alt="logo"
+            width={500}
+            height={500}
+          />
         </div>
       </div>
     </section>

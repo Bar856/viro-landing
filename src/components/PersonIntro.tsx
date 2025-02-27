@@ -48,10 +48,10 @@ const PersonIntro = () => {
         className="w-44 h-44 md:w-52 md:h-52 overflow-hidden shadow-lg border-4 border-gray-300"
         variants={imageVariants}>
         <Image
-          src="/images/orian.jpeg"
+          src="/images/orian-2.png"
           alt="אוריאן אברמוב"
-          width={208}
-          height={208}
+          width={599}
+          height={599}
           className="object-cover w-full h-full"
         />
       </motion.div>
