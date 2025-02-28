@@ -7,6 +7,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import SectionTitle from "./SectionTitle";
 
 export const childVariants = {
   offscreen: {
@@ -27,9 +28,11 @@ export const childVariants = {
 const Testimonials = () => {
   return (
     <div className="max-w-lg w-full mx-auto lg:max-w-full">
-      <h2 className="text-5xl text-primary font-bold text-center mb-8">
-        לקוחות מספרים
-      </h2>
+      <SectionTitle>
+        <h2 className="text-5xl text-primary font-bold text-center mb-8">
+          לקוחות מספרים
+        </h2>
+      </SectionTitle>
       <Swiper
         modules={[Autoplay, Pagination, Navigation]}
         slidesPerView={1}
@@ -39,7 +42,7 @@ const Testimonials = () => {
         loop={true}>
         {testimonials.map((testimonial, index) => (
           <SwiperSlide key={index}>
-            <div className=" text-center p-4 m-2 border border-gray-300 rounded-lg h-[300px] bg-gray-100 shadow-md">
+            <div className=" text-center p-6 m-2 border border-gray-300 rounded-lg min-h-[300px] max-h-[600px] bg-gray-100 shadow-md">
               <div className="mb-4">
                 <h3 className="text-lg font-semibold text-secondary">
                   {testimonial.name}

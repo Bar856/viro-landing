@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="relative flex items-center justify-center h-screen px-5">
+      className="relative flex items-center justify-center min-h-screen px-5">
       {/* Background Image with Fade-in & Blur */}
       <motion.div
         initial={{ opacity: 0, scale: 1.1 }}
@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="text-4xl md:text-6xl md:leading-tight font-bold text-foreground max-w-lg md:max-w-2xl mx-auto">
+          className="text-4xl md:text-6xl md:leading-tight font-bold text-foreground max-w-lg md:max-w-2xl mx-auto mt-10">
           {heroDetails.heading}
         </motion.h1>
 
@@ -69,7 +69,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.9 }}
-          className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl">
+          className="grid grid-cols-1 sm:grid-cols-3 gap-2 max-w-3xl">
           {[
             { label: "תאריך", value: heroDetails.eventDate },
             { label: "שעות", value: heroDetails.eventTime },
@@ -106,20 +106,8 @@ const Hero: React.FC = () => {
         </motion.div>
 
         {/* CTA Button with Pulse Effect */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 1.2 }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-          className="relative mt-4">
-          <ButtonCta />
-          <motion.div
-            className="absolute inset-0 rounded-full bg-opacity-20 blur-lg"
-            animate={{ scale: [1, 1.1, 1], opacity: [0.6, 0.3, 0.6] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          />
-        </motion.div>
+
+        <ButtonCta />
 
         {/* Logo Image with Entrance Animation */}
         <motion.div

@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import { Source_Sans_3, Manrope } from "next/font/google";
+import { Source_Sans_3, Secular_One } from "next/font/google";
 
 import Footer from "@/components/Footer";
 import { siteDetails } from "@/data/siteDetails";
 
 import "./globals.css";
 
-const manrope = Manrope({ subsets: ["latin"] });
+const secular_one = Secular_One({ weight: "400", subsets: ["latin"] });
 const sourceSans = Source_Sans_3({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -43,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="he" dir="rtl">
       <body
-        className={`${manrope.className} ${sourceSans.className} antialiased`}>
+        className={`${secular_one.className} ${sourceSans.className} antialiased`}>
         {siteDetails.googleAnalyticsId && (
           <GoogleAnalytics gaId={siteDetails.googleAnalyticsId} />
         )}

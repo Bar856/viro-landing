@@ -3,6 +3,7 @@ import React from "react";
 import { scheduleItems } from "@/data/loz";
 
 import { motion, Variants } from "framer-motion";
+import SectionTitle from "./SectionTitle";
 
 const containerVariants: Variants = {
   offscreen: {
@@ -41,15 +42,16 @@ export const childVariants = {
 const Schedule: React.FC = () => {
   return (
     <section id="schedule" className="my-12 px-5">
-      <motion.h2
-        className="text-5xl text-primary font-bold mb-10 text-center"
-        variants={childVariants}
-        initial="offscreen"
-        whileInView="onscreen"
-        viewport={{ once: true }}>
-        לו״ז הכנס
-      </motion.h2>
-
+      <SectionTitle>
+        <motion.h2
+          className="text-5xl text-primary font-bold mb-10 text-center"
+          variants={childVariants}
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true }}>
+          לו״ז הכנס
+        </motion.h2>
+      </SectionTitle>
       <motion.div
         className="max-w-4xl mx-auto"
         variants={containerVariants}

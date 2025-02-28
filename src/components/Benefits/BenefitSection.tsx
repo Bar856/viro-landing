@@ -74,6 +74,7 @@ const BenefitSection: React.FC<Props> = ({
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true }}>
+        {/* ✅ מספר התחנה */}
         <div
           className={`w-14 h-14 flex items-center justify-center rounded-full text-xl font-bold border border-white shadow-md ${
             textColors[index % textColors.length]
@@ -98,7 +99,6 @@ const BenefitSection: React.FC<Props> = ({
             className="object-cover w-full h-full"
           />
         </div>
-        {/* ✅ מספר התחנה */}
         <div className="flex flex-col items-center lg:items-start text-center lg:text-right w-full max-w-lg">
           <h3 className="mt-4 text-3xl font-bold">{title}</h3>
           <h4 className="text-lg text-gray-300 mt-1">{author}</h4>

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import SectionTitle from "./SectionTitle";
 
 const containerVariants = {
   offscreen: {
@@ -44,29 +45,29 @@ const PersonIntro = () => {
       viewport={{ once: true }}>
       {/* Image */}
       <motion.div
-        className="w-44 h-44 md:w-52 md:h-52 overflow-hidden shadow-lg border-4 border-gray-300"
+        className="w-80 h-full md:w-96 overflow-hidden"
         variants={imageVariants}>
         <Image
           src="/images/orian-2.png"
           alt="אוריאן אברמוב"
-          width={599}
-          height={599}
-          className="object-cover w-full h-full"
+          width={1096}
+          height={1270}
+          className="object-cover w-full h-full "
         />
       </motion.div>
       {/* Text Content */}
       <motion.div
-        className="max-w-lg text-center md:text-right"
+        className="max-w-lg text-center md:text-right "
         variants={containerVariants}>
-        <motion.h1
-          className="text-5xl md:text-3xl font-bold text-primary md:col-start-2 md:col-end-3"
-          variants={containerVariants}>
-          מנחת הכנס
-        </motion.h1>
-        <h2 className="text-2xl md:text-3xl font-bold text-primary">
+        <SectionTitle>
+          <motion.h1 className="manrope" variants={containerVariants}>
+            מנחת הכנס
+          </motion.h1>
+        </SectionTitle>
+        <h2 className="text-2xl md:text-3xl font-bold text-primary manrope">
           אוריאן אברמוב
         </h2>
-        <p className="text-lg font-semibold text-secondary mt-1">
+        <p className="text-lg font-semibold text-secondary mt-1 manrope">
           יועצת משכנתאות ופיננסים | מומחית לתיקים מורכבים, מסורבים ואיחוד
           הלוואות
         </p>

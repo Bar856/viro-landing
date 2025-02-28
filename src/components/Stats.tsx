@@ -1,24 +1,26 @@
 "use client";
 import { stats } from "@/data/stats";
 import { motion } from "framer-motion";
+import SectionTitle from "./SectionTitle";
 
 const Stats: React.FC = () => {
   return (
     <section id="stats" className="py-10 lg:py-20">
       {/* Section Title with Scroll Animation */}
-      <motion.h1
-        className="text-5xl font-bold mb-10 text-primary text-center"
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }} // Animates only the first time in view
-      >
-        מטרת הכנס
-      </motion.h1>
-
+      <SectionTitle>
+        <motion.h1
+          className="mb-10 text-center"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }} // Animates only the first time in view
+        >
+          מטרת הכנס
+        </motion.h1>
+      </SectionTitle>
       {/* Stats Grid with On-Scroll Animations */}
       <motion.div
-        className="grid sm:grid-cols-3 gap-8"
+        className="grid sm:grid-cols-3 gap-8 mt-8"
         initial="hidden"
         whileInView="visible"
         variants={{
