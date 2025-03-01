@@ -4,6 +4,7 @@ import { Source_Sans_3, Secular_One } from "next/font/google";
 
 import Footer from "@/components/Footer";
 import { siteDetails } from "@/data/siteDetails";
+import Script from "next/script";
 
 import "./globals.css";
 
@@ -50,6 +51,9 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
       </body>
+      <Script
+        src="https://cdn.userway.org/widget.js"
+        data-account="ET3YhDxaZJ"></Script>
     </html>
   );
 }
