@@ -35,7 +35,7 @@ export const benefits: IBenefit[] = [
         icon: <FiTrendingUp size={26} />,
       },
     ],
-    imageSrc: "/images/orian.jpeg",
+    imageSrc: "/images/01.png",
   },
   {
     title: "חיים בפלוס",
@@ -59,7 +59,7 @@ export const benefits: IBenefit[] = [
         icon: <FiTrendingUp size={26} />,
       },
     ],
-    imageSrc: "/images/shiran.png",
+    imageSrc: "/images/02.png",
   },
   {
     title: "חיים מ(ע)ושרים",
@@ -83,7 +83,7 @@ export const benefits: IBenefit[] = [
         icon: <FiShield size={26} />,
       },
     ],
-    imageSrc: "/images/osher.jpeg",
+    imageSrc: "/images/03.png",
   },
   {
     title: "חרדה כלכלית והשפעות על החוסן הנפשי",
@@ -108,6 +108,6 @@ export const benefits: IBenefit[] = [
         icon: <FiBarChart2 size={26} />,
       },
     ],
-    imageSrc: "/images/marina.png",
+    imageSrc: "/images/04.png",
   },
 ];

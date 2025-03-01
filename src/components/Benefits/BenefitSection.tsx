@@ -75,26 +75,23 @@ const BenefitSection: React.FC<Props> = ({
         whileInView="onscreen"
         viewport={{ once: true }}>
         {/* ✅ מספר התחנה */}
-        <div
+        {/* <div
           className={`w-14 h-14 flex items-center justify-center rounded-full text-xl font-bold border border-white shadow-md ${
             textColors[index % textColors.length]
           }`}>
           {index + 1}
-        </div>
+        </div> */}
         {/* ✅ תמונת המרצה - מתחלפת צדדים לפי `imageAtRight` */}
         <div
-          className={clsx(
-            "w-48 h-48 rounded-full overflow-hidden border-4 border-gray-300 shadow-xl flex-shrink-0",
-            {
-              "lg:order-2": imageAtRight,
-              "lg:order-1": !imageAtRight,
-            }
-          )}>
+          className={clsx("w-48 h-48 overflow-hidden flex-shrink-0", {
+            "lg:order-2": imageAtRight,
+            "lg:order-1": !imageAtRight,
+          })}>
           <Image
             src={imageSrc}
             alt={title}
-            width={192}
-            height={192}
+            width={200}
+            height={200}
             quality={100}
             className="object-cover w-full h-full"
           />
