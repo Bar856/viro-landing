@@ -10,7 +10,7 @@ Please check out the documentation below to get started.
 
 ---
 
-## Features
+## Featuress
 
 - **Next.js** app router with **TypeScript**
 - **Tailwind CSS** v3 for flexible styling customization
@@ -96,8 +96,7 @@ Finwise is an open-source project, and we welcome contributions from the communi
 
 Join our community discussions on GitHub to share ideas, ask questions, or suggest improvements. Let’s build something amazing together!
 
-
---- 
+---
 
 ## License
 
