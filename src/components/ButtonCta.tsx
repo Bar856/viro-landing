@@ -15,7 +15,7 @@ const ButtonCta = () => {
       <Link
         href="https://ashdod.smarticket.co.il/הכנס___מחוב_לחופש_?"
         target="_blank"
-        className="cursor-pointer px-8 py-3 bg-yellow-600 text-white font-bold rounded-lg shadow-lg transition-all duration-300 hover:bg-yellow-700 hover:shadow-xl">
+        className="cursor-pointer px-8 py-3 bg-yellow-600 text-white font-bold rounded-lg shadow-lg transition-all duration-300 hover:bg-yellow-700 hover:shadow-xl whitespace-nowrap">
         תפסו את מקומכם עכשיו!
       </Link>
 
