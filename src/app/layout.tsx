@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/orian-2.png",
+        url: "/images/social.png",
         width: 1200,
         height: 675,
         alt: siteDetails.siteName,
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteDetails.metadata.title,
     description: siteDetails.metadata.description,
-    images: ["/images/twitter-image.jpg"],
+    images: ["/images/social.png"],
   },
 };
 
@@ -44,7 +44,8 @@ export default function RootLayout({
   return (
     <html lang="he" dir="rtl">
       <body
-        className={`${secular_one.className} ${sourceSans.className} antialiased`}>
+        className={`${secular_one.className} ${sourceSans.className} antialiased`}
+      >
         {siteDetails.googleAnalyticsId && (
           <GoogleAnalytics gaId={siteDetails.googleAnalyticsId} />
         )}
@@ -53,7 +54,8 @@ export default function RootLayout({
       </body>
       <Script
         src="https://cdn.userway.org/widget.js"
-        data-account="ET3YhDxaZJ"></Script>
+        data-account="ET3YhDxaZJ"
+      ></Script>
     </html>
   );
 }
