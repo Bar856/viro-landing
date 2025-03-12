@@ -19,14 +19,7 @@ export const metadata: Metadata = {
     description: siteDetails.metadata.description,
     url: siteDetails.siteUrl,
     type: "website",
-    images: [
-      {
-        url: "/images/social.png",
-        width: 1200,
-        height: 675,
-        alt: siteDetails.siteName,
-      },
-    ],
+    images: "/images/social.png",
   },
   twitter: {
     card: "summary_large_image",
