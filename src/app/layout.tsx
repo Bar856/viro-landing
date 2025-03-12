@@ -48,7 +48,7 @@ export default function RootLayout({
       <Script
         src="https://cdn.userway.org/widget.js"
         data-account="ET3YhDxaZJ"
-      ></Script>
+      />
     </html>
   );
 }
