@@ -13,7 +13,7 @@ interface CountdownProps {
 }
 
 const Countdown: React.FC<CountdownProps> = ({
-  targetDate = new Date("2025-03-25T17:30:00"),
+  targetDate = new Date("2025-07-31T17:30:00"),
 }) => {
   // ✅ Memoize the function so it doesn’t recreate on every render
   const calculateTimeLeft = useCallback((): TimeLeft => {
