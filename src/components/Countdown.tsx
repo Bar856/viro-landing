@@ -59,7 +59,7 @@ interface TimeBoxProps {
 
 const TimeBox: React.FC<TimeBoxProps> = ({ label, value }) => {
   return (
-    <div className="p-2 w-16 bg-yellow-600 rounded-md text-center shadow-md">
+    <div className="p-2 w-20 bg-yellow-600 rounded-md text-center shadow-md">
       <div className="text-4xl font-bold border-2 border-white">
         {value.toString().padStart(2, "0")}
       </div>
